@@ -1,10 +1,10 @@
 const rotas = require("express")();
 const {
-  listagemPokemon,
+  listagemPokemonPorPagina,
   pokemonPorNomeOuId,
 } = require("./controladores/pokemon");
 
-rotas.get("/pokemon", listagemPokemon);
+rotas.get("/pokemon/:pagina", listagemPokemonPorPagina);
 rotas.get("/pokemon/:idOuNome", pokemonPorNomeOuId);
 
 module.exports = rotas;

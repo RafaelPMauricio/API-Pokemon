@@ -1,8 +1,10 @@
 const { listarPokemons, detalharPokemon } = require("utils-playground");
 
-const listagemPokemon = async (req, res) => {
+const listagemPokemonPorPagina = async (req, res) => {
+  const { pagina } = req.params;
+
   try {
-    const pokemons = await listarPokemons();
+    const pokemons = await listarPokemons(pagina);
 
     return res.status(200).json(pokemons.results);
   } catch (erro) {
@@ -50,4 +52,4 @@ const pokemonPorNomeOuId = async (req, res) => {
   }
 };
 
-module.exports = { listagemPokemon, pokemonPorNomeOuId };
+module.exports = { listagemPokemonPorPagina, pokemonPorNomeOuId };

@@ -70,4 +70,4 @@ GET - Pegar detalhes do pokemon
 "localhost:8000/pokemon/detalhes/25"
 ```
 
-<img src="./imagensReadMe/rota-lista-2.png">
+<img src="./imagensReadMe/rota-detalhes-2.png">
